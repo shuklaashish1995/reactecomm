@@ -4133,6 +4133,7 @@ header .main-navbar .nav-menu > li .mega-menu-container {
   width: 100%;
   border-radius: 4px;
 }
+
 header .main-navbar .nav-menu > li .mega-menu-container.poster-bg-image {
   background-image: url(../images/voxo.png);
   background-position: center;
@@ -6815,8 +6816,6 @@ header .main-navbar .nav-menu > li.mega-menu.home-menu .megamenu-image-title {
 .instagram-wrap .product-box .img-wrapper img {
   max-height: unset !important;
   max-width: unset !important;
-  height: 225px;
-  width: 225px;
   -o-object-fit: contain;
   object-fit: contain;
 }

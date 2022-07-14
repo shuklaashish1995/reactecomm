@@ -1,8 +1,29 @@
 import React from "react";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 import "../assets/css/style.css";
 import "../assets/css/bootstrap.css";
 import "../assets/css/demo1.css";
 const Home = () => {
+  const responsive = {
+    superLargeDesktop: {
+      // the naming can be any, depends on you.
+      breakpoint: { max: 4000, min: 3000 },
+      items: 5,
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 5,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+    },
+  };
   return (
     <>
       <header id="home">
@@ -11,7 +32,7 @@ const Home = () => {
             <div className="row">
               <div className="col-auto d-xl-block d-none">
                 <ul className="border-list">
-                  <li>Voxo ecommerce always free delivery</li>
+                  <li>Darwin ecommerce always free delivery</li>
                   <li>New Customer Extra 50% Off</li>
                 </ul>
               </div>
@@ -168,273 +189,6 @@ const Home = () => {
                         className="logo"
                         alt="logo"
                       />
-                    </div>
-                    <div className="category-menu">
-                      <button
-                        type="button"
-                        className="btn btn-solid-default toggle-category d-sm-block d-none"
-                      >
-                        All categories
-                        <i className="fas fa-chevron-down d-xl-inline-block d-none"></i>
-                      </button>
-                      <div className="category-dropdown">
-                        <div className="close-btn d-xl-none">
-                          Category List
-                          <span className="back-category">
-                            <i className="fa fa-angle-left"></i>
-                          </span>
-                        </div>
-                        <ul>
-                          <li className="submenu">
-                            <a href="javascript:void(0)">watches</a>
-                            <ul className="category-mega-menu">
-                              <li>
-                                <div className="row">
-                                  <div className="col-xl-3">
-                                    <div className="category-childmenu">
-                                      <div className="title-category">
-                                        <h6>Watch Brands</h6>
-                                      </div>
-                                      <ul>
-                                        <li>
-                                          <a href="javascript:void(0)">Coros</a>
-                                        </li>
-                                        <li>
-                                          <a href="javascript:void(0)">Titan</a>
-                                        </li>
-                                        <li>
-                                          <a href="javascript:void(0)">
-                                            Citizen
-                                          </a>
-                                        </li>
-                                        <li>
-                                          <a href="javascript:void(0)">Casio</a>
-                                        </li>
-                                        <li>
-                                          <a href="javascript:void(0)">
-                                            Movado
-                                          </a>
-                                        </li>
-                                        <li>
-                                          <a href="javascript:void(0)">
-                                            Tissot
-                                          </a>
-                                        </li>
-                                      </ul>
-                                    </div>
-                                  </div>
-                                  <div className="col-xl-3">
-                                    <div className="category-childmenu">
-                                      <div className="title-category">
-                                        <h6>Watch Display</h6>
-                                      </div>
-                                      <ul>
-                                        <li>
-                                          <a href="javascript:void(0)">
-                                            Analog
-                                          </a>
-                                        </li>
-                                        <li>
-                                          <a href="javascript:void(0)">
-                                            Digital
-                                          </a>
-                                        </li>
-                                        <li>
-                                          <a href="javascript:void(0)">
-                                            Hybrid
-                                          </a>
-                                        </li>
-                                        <li>
-                                          <a href="javascript:void(0)">
-                                            Tactile
-                                          </a>
-                                        </li>
-                                        <li>
-                                          <a href="javascript:void(0)">
-                                            Touchscreen
-                                          </a>
-                                        </li>
-                                      </ul>
-                                    </div>
-                                  </div>
-                                  <div className="col-xl-3">
-                                    <div className="category-childmenu">
-                                      <div className="title-category">
-                                        <h6>Watch Style</h6>
-                                      </div>
-                                      <ul>
-                                        <li>
-                                          <a href="javascript:void(0)">
-                                            Casual
-                                          </a>
-                                        </li>
-                                        <li>
-                                          <a href="javascript:void(0)">Dress</a>
-                                        </li>
-                                        <li>
-                                          <a href="javascript:void(0)">
-                                            Fashion
-                                          </a>
-                                        </li>
-                                        <li>
-                                          <a href="javascript:void(0)">
-                                            Luxury
-                                          </a>
-                                        </li>
-                                      </ul>
-                                    </div>
-                                  </div>
-                                  <div className="col-xl-3">
-                                    <div className="category-banner">
-                                      <img
-                                        src={require("../assets/images/electronics/banner/4.jpg")}
-                                        className="img-fluid lazyload"
-                                        alt=""
-                                      />
-                                    </div>
-                                  </div>
-                                </div>
-                              </li>
-                            </ul>
-                          </li>
-                          <li>
-                            <a href="javascript:void(0)">footwear</a>
-                          </li>
-
-                          <li className="submenu">
-                            <a href="javascript:void(0)">clothing</a>
-                            <ul className="category-mega-menu">
-                              <li>
-                                <div className="row">
-                                  <div className="col-xl-3">
-                                    <div className="category-childmenu">
-                                      <div className="title-category">
-                                        <h6>Women's fashion</h6>
-                                      </div>
-                                      <ul>
-                                        <li>
-                                          <a href="shop-left-sidebar.html">
-                                            Dress
-                                          </a>
-                                        </li>
-                                        <li>
-                                          <a href="shop-left-sidebar.html">
-                                            Skirts
-                                          </a>
-                                        </li>
-                                        <li>
-                                          <a href="shop-left-sidebar.html">
-                                            Western wear
-                                          </a>
-                                        </li>
-                                        <li>
-                                          <a href="shop-left-sidebar.html">
-                                            Etahnic wear
-                                          </a>
-                                        </li>
-                                        <li>
-                                          <a href="shop-left-sidebar.html">
-                                            Sports wear
-                                          </a>
-                                        </li>
-                                      </ul>
-                                    </div>
-                                  </div>
-                                  <div className="col-xl-3">
-                                    <div className="category-childmenu">
-                                      <div className="title-category">
-                                        <h6>Men's fashion</h6>
-                                      </div>
-                                      <ul>
-                                        <li>
-                                          <a href="shop-left-sidebar.html">
-                                            Sports wear
-                                          </a>
-                                        </li>
-                                        <li>
-                                          <a href="shop-left-sidebar.html">
-                                            Etahnic wear
-                                          </a>
-                                        </li>
-                                        <li>
-                                          <a href="shop-left-sidebar.html">
-                                            Western wear
-                                          </a>
-                                        </li>
-                                      </ul>
-                                    </div>
-                                  </div>
-                                  <div className="col-xl-3">
-                                    <div className="category-childmenu">
-                                      <div className="title-category">
-                                        <h6>Accesories</h6>
-                                      </div>
-                                      <ul>
-                                        <li>
-                                          <a href="shop-left-sidebar.html">
-                                            earrings
-                                          </a>
-                                        </li>
-                                        <li>
-                                          <a href="shop-left-sidebar.html">
-                                            fashion jewellery
-                                          </a>
-                                        </li>
-                                        <li>
-                                          <a href="shop-left-sidebar.html">
-                                            ties
-                                          </a>
-                                        </li>
-                                        <li>
-                                          <a href="shop-left-sidebar.html">
-                                            caps and hats
-                                          </a>
-                                        </li>
-                                        <li>
-                                          <a href="shop-left-sidebar.html">
-                                            cufflinks
-                                          </a>
-                                        </li>
-                                        <li>
-                                          <a href="shop-left-sidebar.html">
-                                            precious jewellery
-                                          </a>
-                                        </li>
-                                        <li>
-                                          <a href="shop-left-sidebar.html">
-                                            necklaces
-                                          </a>
-                                        </li>
-                                      </ul>
-                                    </div>
-                                  </div>
-                                  <div className="col-xl-3">
-                                    <div className="category-banner">
-                                      <img
-                                        src={require("../assets/images/banner/1.jpg")}
-                                        className="img-fluid lazyload"
-                                        alt=""
-                                      />
-                                    </div>
-                                  </div>
-                                </div>
-                              </li>
-                            </ul>
-                          </li>
-                          <li>
-                            <a href="javascript:void(0)">Accessories</a>
-                          </li>
-                          <li>
-                            <a href="javascript:void(0)">Home & decor</a>
-                          </li>
-                          <li>
-                            <a href="javascript:void(0)">Bags</a>
-                          </li>
-                          <li>
-                            <a href="javascript:void(0)">Kitchan</a>
-                          </li>
-                        </ul>
-                      </div>
                     </div>
                   </div>
                   <nav>
@@ -730,7 +484,7 @@ const Home = () => {
                               href="javascript:void(0)"
                               className="nav-link menu-title"
                             >
-                              <div className="gradient-title">Voxo plus</div>
+                              <div className="gradient-title">Darwin plus</div>
                             </a>
                             <div className="mega-menu-container poster-bg-image menu-content">
                               <div className="container-fluid">
@@ -1074,7 +828,7 @@ const Home = () => {
                           </li>
                           <li className="mobile-poster d-flex d-xl-none">
                             <img
-                              src="assets/images/pwa.png"
+                              src={require("../assets/images/pwa.png")}
                               className="img-fluid"
                               alt=""
                             />
@@ -1129,103 +883,6 @@ const Home = () => {
                           </a>
                         </div>
                       </li>
-                      <li className="onhover-dropdown cart-dropdown">
-                        <button
-                          type="button"
-                          className="btn btn-solid-default btn-spacing"
-                        >
-                          <i data-feather="shopping-cart" className="pe-2"></i>
-                          <span>$5686.25</span>
-                        </button>
-                        <div className="onhover-div">
-                          <div className="cart-menu">
-                            <div className="cart-title">
-                              <h6>
-                                <i data-feather="shopping-bag"></i>
-                                <span className="label label-theme rounded-pill">
-                                  5
-                                </span>
-                              </h6>
-                              <span className="d-md-none d-block">
-                                <i className="fas fa-arrow-right back-cart"></i>
-                              </span>
-                            </div>
-                            <ul className="custom-scroll">
-                              <li>
-                                <div className="media">
-                                  <img
-                                    src="assets/images/fashion/product/front/1.jpg"
-                                    className="img-fluid lazyload"
-                                    alt=""
-                                  />
-                                  <div className="media-body">
-                                    <h6>Slim Fit Plastic Coat</h6>
-                                    <div className="qty-with-price">
-                                      <span>$78.00</span>
-                                      <span>
-                                        <input
-                                          type="number"
-                                          className="form-control"
-                                          value="1"
-                                        />
-                                      </span>
-                                    </div>
-                                  </div>
-                                  <button
-                                    type="button"
-                                    className="btn-close d-block d-md-none"
-                                    aria-label="Close"
-                                  >
-                                    <i className="fas fa-times"></i>
-                                  </button>
-                                </div>
-                              </li>
-                              <li>
-                                <div className="media">
-                                  <img
-                                    src="assets/images/fashion/product/front/7.jpg"
-                                    className="img-fluid lazyload"
-                                    alt=""
-                                  />
-                                  <div className="media-body">
-                                    <h6>Womens Stylish Jacket</h6>
-                                    <div className="qty-with-price">
-                                      <span>$24.00</span>
-                                      <span>
-                                        <input
-                                          type="number"
-                                          className="form-control"
-                                          value="1"
-                                        />
-                                      </span>
-                                    </div>
-                                  </div>
-                                  <button
-                                    type="button"
-                                    className="btn-close d-block d-md-none"
-                                    aria-label="Close"
-                                  >
-                                    <i className="fas fa-times"></i>
-                                  </button>
-                                </div>
-                              </li>
-                            </ul>
-                          </div>
-                          <div className="cart-btn">
-                            <h6 className="cart-total">
-                              <span className="font-light">Total:</span> $
-                              542.00
-                            </h6>
-                            <button
-                              onclick="location.href = 'cart.html';"
-                              type="button"
-                              className="btn btn-solid-default btn-block"
-                            >
-                              Proceed to payment
-                            </button>
-                          </div>
-                        </div>
-                      </li>
                     </ul>
                   </div>
                   <div className="search-full">
@@ -1247,7 +904,7 @@ const Home = () => {
                         <li>
                           <div className="product-cart media">
                             <img
-                              src="assets/images/electronics/product/1.jpg"
+                              src={require("../assets/images/electronics/product/1.jpg")}
                               className="img-fluid lazyload"
                               alt=""
                             />
@@ -1279,7 +936,7 @@ const Home = () => {
                         <li>
                           <div className="product-cart media">
                             <img
-                              src="assets/images/electronics/product/5.jpg"
+                              src={require("../assets/images/electronics/product/5.jpg")}
                               className="img-fluid lazyload"
                               alt=""
                             />
@@ -1359,7 +1016,7 @@ const Home = () => {
             <div>
               <div className="home-slider">
                 <img
-                  src="assets/images/electronics/slider/1.jpg"
+                  src={require("../assets/images/electronics/slider/1.jpg")}
                   className="bg-img lazyload"
                   alt=""
                 />
@@ -1460,7 +1117,7 @@ const Home = () => {
                               data-source="assets/images/electronics/slider/1.jpg"
                             >
                               <img
-                                src="assets/images/electronics/slider/2.jpg"
+                                src={require("../assets/images/electronics/slider/2.jpg")}
                                 className="img-fluid lazyload"
                                 alt=""
                               />
@@ -1472,7 +1129,7 @@ const Home = () => {
                               data-source="assets/images/electronics/slider/1.jpg"
                             >
                               <img
-                                src="assets/images/electronics/slider/3.jpg"
+                                src={require("../assets/images/electronics/slider/3.jpg")}
                                 className="img-fluid lazyload"
                                 alt=""
                               />
@@ -1489,7 +1146,7 @@ const Home = () => {
                             className="font-default"
                           >
                             <img
-                              src="assets/images/social-icon/1.png"
+                              src={require("../assets/images/social-icon/1.png")}
                               className="img-fluid lazyload"
                               alt=""
                             />
@@ -1502,7 +1159,7 @@ const Home = () => {
                             className="font-default"
                           >
                             <img
-                              src="assets/images/social-icon/2.png"
+                              src={require("../assets/images/social-icon/2.png")}
                               className="img-fluid lazyload"
                               alt=""
                             />
@@ -1515,7 +1172,7 @@ const Home = () => {
                             className="font-default"
                           >
                             <img
-                              src="assets/images/social-icon/3.png"
+                              src={require("../assets/images/social-icon/3.png")}
                               className="img-fluid lazyload"
                               alt=""
                             />
@@ -1540,7 +1197,7 @@ const Home = () => {
             <div>
               <div className="home-slider">
                 <img
-                  src="assets/images/electronics/slider/1.jpg"
+                  src={require("../assets/images/electronics/slider/1.jpg")}
                   className="bg-img lazyload"
                   alt=""
                 />
@@ -1636,7 +1293,7 @@ const Home = () => {
                           <li>
                             <a href="javascript:void(0)">
                               <img
-                                src="assets/images/electronics/slider/2.jpg"
+                                src={require("../assets/images/electronics/slider/2.jpg")}
                                 className="img-fluid lazyload"
                                 alt=""
                               />
@@ -1645,7 +1302,7 @@ const Home = () => {
                           <li>
                             <a href="javascript:void(0)">
                               <img
-                                src="assets/images/electronics/slider/3.jpg"
+                                src={require("../assets/images/electronics/slider/3.jpg")}
                                 className="img-fluid lazyload"
                                 alt=""
                               />
@@ -1662,7 +1319,7 @@ const Home = () => {
                             className="font-default"
                           >
                             <img
-                              src="assets/images/social-icon/1.png"
+                              src={require("../assets/images/social-icon/1.png")}
                               className="img-fluid lazyload"
                               alt=""
                             />
@@ -1675,7 +1332,7 @@ const Home = () => {
                             className="font-default"
                           >
                             <img
-                              src="assets/images/social-icon/2.png"
+                              src={require("../assets/images/social-icon/2.png")}
                               className="img-fluid lazyload"
                               alt=""
                             />
@@ -1688,7 +1345,7 @@ const Home = () => {
                             className="font-default"
                           >
                             <img
-                              src="assets/images/social-icon/3.png"
+                              src={require("../assets/images/social-icon/3.png")}
                               className="img-fluid lazyload"
                               alt=""
                             />
@@ -1992,7 +1649,7 @@ const Home = () => {
                     <div className="img-wrapper">
                       <a href="product-left-sidebar.html">
                         <img
-                          src="assets/images/electronics/product/3.jpg"
+                          src={require("../assets/images/electronics/product/3.jpg")}
                           className="bg-img lazyload"
                           alt=""
                         />
@@ -2065,7 +1722,7 @@ const Home = () => {
                     <div className="img-wrapper">
                       <a href="product-left-sidebar.html">
                         <img
-                          src="assets/images/electronics/product/4.jpg"
+                          src={require("../assets/images/electronics/product/4.jpg")}
                           className="bg-img lazyload"
                           alt=""
                         />
@@ -2141,7 +1798,7 @@ const Home = () => {
                     <div className="img-wrapper">
                       <a href="product-left-sidebar.html">
                         <img
-                          src="assets/images/electronics/product/5.jpg"
+                          src={require("../assets/images/electronics/product/5.jpg")}
                           className="bg-img lazyload"
                           alt=""
                         />
@@ -2220,7 +1877,7 @@ const Home = () => {
                     <div className="img-wrapper">
                       <a href="product-left-sidebar.html">
                         <img
-                          src="assets/images/electronics/product/6.jpg"
+                          src={require("../assets/images/electronics/product/6.jpg")}
                           className="bg-img lazyload"
                           alt=""
                         />
@@ -2293,7 +1950,7 @@ const Home = () => {
                     <div className="img-wrapper">
                       <a href="product-left-sidebar.html">
                         <img
-                          src="assets/images/electronics/product/4.jpg"
+                          src={require("../assets/images/electronics/product/4.jpg")}
                           className="bg-img lazyload"
                           alt=""
                         />
@@ -2372,12 +2029,7 @@ const Home = () => {
         <div className="container">
           <div className="row gy-3">
             <div className="col-xl-9 col-lg-8">
-              <div className="timer-banner text-center">
-                <img
-                  src="assets/images/electronics/banner/3.jpg"
-                  className="bg-img lazyload"
-                  alt=""
-                />
+              <div className="timer-banner bg-size text-center ">
                 <div className="coupon-code theme-color">DGR548548</div>
                 <div className="discount-offer">
                   <h5>
@@ -2436,7 +2088,7 @@ const Home = () => {
                 <div className="social-media">
                   <div className="social-icon">
                     <img
-                      src="assets/images/social-icon/1.png"
+                      src={require("../assets/images/social-icon/1.png")}
                       className="img-fluid lazyload"
                       alt=""
                     />
@@ -2445,7 +2097,7 @@ const Home = () => {
 
                   <div className="social-icon">
                     <img
-                      src="assets/images/social-icon/2.png"
+                      src={require("../assets/images/social-icon/2.png")}
                       className="img-fluid lazyload"
                       alt=""
                     />
@@ -2454,7 +2106,7 @@ const Home = () => {
 
                   <div className="social-icon">
                     <img
-                      src="assets/images/social-icon/3.png"
+                      src={require("../assets/images/social-icon/3.png")}
                       className="img-fluid lazyload"
                       alt=""
                     />
@@ -2464,12 +2116,7 @@ const Home = () => {
               </div>
             </div>
             <div className="col-xl-3 col-lg-4 small-banner">
-              <div className="collection-banner text-center collection-center">
-                <img
-                  src="assets/images/electronics/banner/4.jpg"
-                  className="bg-img lazyload"
-                  alt=""
-                />
+              <div className="collection-banner text-center collection-center headphone">
                 <div className="collection-contain">
                   <h6 className="theme-color mb-2">New Headphone</h6>
                   <h2>50% Cash </h2>
@@ -2515,7 +2162,7 @@ const Home = () => {
                         className="text-center"
                       >
                         <img
-                          src="assets/images/electronics/product/png/1.png"
+                          src={require("../assets/images/electronics/product/png/1.png")}
                           className="img-fluid lazyload"
                           alt=""
                         />
@@ -2567,7 +2214,7 @@ const Home = () => {
                       </div>
                       <a href="shop-left-sidebar.html" className="text-center">
                         <img
-                          src="assets/images/electronics/product/png/2.png"
+                          src={require("../assets/images/electronics/product/png/2.png")}
                           className="img-fluid lazyload"
                           alt=""
                         />
@@ -2622,7 +2269,7 @@ const Home = () => {
                         className="text-center"
                       >
                         <img
-                          src="assets/images/electronics/product/png/3.png"
+                          src={require("../assets/images/electronics/product/png/3.png")}
                           className="img-fluid lazyload"
                           alt=""
                         />
@@ -2677,7 +2324,7 @@ const Home = () => {
                         className="text-center"
                       >
                         <img
-                          src="assets/images/electronics/product/png/4.png"
+                          src={require("../assets/images/electronics/product/png/4.png")}
                           className="img-fluid lazyload"
                           alt=""
                         />
@@ -2732,7 +2379,7 @@ const Home = () => {
                         className="text-center"
                       >
                         <img
-                          src="assets/images/electronics/product/png/5.png"
+                          src={require("../assets/images/electronics/product/png/5.png")}
                           className="img-fluid lazyload"
                           alt=""
                         />
@@ -2787,7 +2434,7 @@ const Home = () => {
                         className="text-center"
                       >
                         <img
-                          src="assets/images/electronics/product/png/6.png"
+                          src={require("../assets/images/electronics/product/png/6.png")}
                           className="img-fluid lazyload"
                           alt=""
                         />
@@ -2842,7 +2489,7 @@ const Home = () => {
                         className="text-center"
                       >
                         <img
-                          src="assets/images/electronics/product/png/7.png"
+                          src={require("../assets/images/electronics/product/png/7.png")}
                           className="img-fluid lazyload"
                           alt=""
                         />
@@ -2897,7 +2544,7 @@ const Home = () => {
                         className="text-center"
                       >
                         <img
-                          src="assets/images/electronics/product/png/5.png"
+                          src={require("../assets/images/electronics/product/png/5.png")}
                           className="img-fluid lazyload"
                           alt=""
                         />
@@ -3047,7 +2694,7 @@ const Home = () => {
                                   className="text-center"
                                 >
                                   <img
-                                    src="assets/images/electronics/product/png/11.png"
+                                    src={require("../assets/images/electronics/product/png/11.png")}
                                     className="img-fluid lazyload"
                                     alt=""
                                   />
@@ -3092,7 +2739,7 @@ const Home = () => {
                                   className="text-center"
                                 >
                                   <img
-                                    src="assets/images/electronics/product/png/13.png"
+                                    src={require("../assets/images/electronics/product/png/13.png")}
                                     className="img-fluid lazyload"
                                     alt=""
                                   />
@@ -3137,7 +2784,7 @@ const Home = () => {
                                   className="text-center"
                                 >
                                   <img
-                                    src="assets/images/electronics/product/png/12.png"
+                                    src={require("../assets/images/electronics/product/png/12.png")}
                                     className="img-fluid lazyload"
                                     alt=""
                                   />
@@ -3188,7 +2835,7 @@ const Home = () => {
                               </div>
                               <a href="javascript:void(0)">
                                 <img
-                                  src="assets/images/electronics/product/png/14.png"
+                                  src={require("../assets/images/electronics/product/png/14.png")}
                                   className="img-fluid lazyload"
                                   alt=""
                                 />
@@ -3241,7 +2888,7 @@ const Home = () => {
                                   className="text-center"
                                 >
                                   <img
-                                    src="assets/images/electronics/product/png/8.png"
+                                    src={require("../assets/images/electronics/product/png/8.png")}
                                     className="img-fluid lazyload"
                                     alt=""
                                   />
@@ -3286,7 +2933,7 @@ const Home = () => {
                                   className="text-center"
                                 >
                                   <img
-                                    src="assets/images/electronics/product/png/9.png"
+                                    src={require("../assets/images/electronics/product/png/9.png")}
                                     className="img-fluid lazyload"
                                     alt=""
                                   />
@@ -3331,7 +2978,7 @@ const Home = () => {
                                   className="text-center"
                                 >
                                   <img
-                                    src="assets/images/electronics/product/png/10.png"
+                                    src={require("../assets/images/electronics/product/png/10.png")}
                                     className="img-fluid lazyload"
                                     alt=""
                                   />
@@ -3388,7 +3035,7 @@ const Home = () => {
                                   className="text-center"
                                 >
                                   <img
-                                    src="assets/images/electronics/product/png/9.png"
+                                    src={require("../assets/images/electronics/product/png/9.png")}
                                     className="img-fluid lazyload"
                                     alt=""
                                   />
@@ -3433,7 +3080,7 @@ const Home = () => {
                                   className="text-center"
                                 >
                                   <img
-                                    src="assets/images/electronics/product/png/8.png"
+                                    src={require("../assets/images/electronics/product/png/8.png")}
                                     className="img-fluid lazyload"
                                     alt=""
                                   />
@@ -3478,7 +3125,7 @@ const Home = () => {
                                   className="text-center"
                                 >
                                   <img
-                                    src="assets/images/electronics/product/png/10.png"
+                                    src={require("../assets/images/electronics/product/png/10.png")}
                                     className="img-fluid lazyload"
                                     alt=""
                                   />
@@ -3531,7 +3178,7 @@ const Home = () => {
                               </div>
                               <a href="javascript:void(0)">
                                 <img
-                                  src="assets/images/electronics/product/png/14.png"
+                                  src={require("../assets/images/electronics/product/png/14.png")}
                                   className="img-fluid lazyload"
                                   alt=""
                                 />
@@ -3584,7 +3231,7 @@ const Home = () => {
                                   className="text-center"
                                 >
                                   <img
-                                    src="assets/images/electronics/product/png/13.png"
+                                    src={require("../assets/images/electronics/product/png/13.png")}
                                     className="img-fluid lazyload"
                                     alt=""
                                   />
@@ -3629,7 +3276,7 @@ const Home = () => {
                                   className="text-center"
                                 >
                                   <img
-                                    src="assets/images/electronics/product/png/11.png"
+                                    src={require("../assets/images/electronics/product/png/11.png")}
                                     className="img-fluid lazyload"
                                     alt=""
                                   />
@@ -3674,7 +3321,7 @@ const Home = () => {
                                   className="text-center"
                                 >
                                   <img
-                                    src="assets/images/electronics/product/png/12.png"
+                                    src={require("../assets/images/electronics/product/png/12.png")}
                                     className="img-fluid lazyload"
                                     alt=""
                                   />
@@ -3733,7 +3380,7 @@ const Home = () => {
                                   className="text-center"
                                 >
                                   <img
-                                    src="assets/images/electronics/product/png/12.png"
+                                    src={require("../assets/images/electronics/product/png/12.png")}
                                     className="img-fluid lazyload"
                                     alt=""
                                   />
@@ -3778,7 +3425,7 @@ const Home = () => {
                                   className="text-center"
                                 >
                                   <img
-                                    src="assets/images/electronics/product/png/13.png"
+                                    src={require("../assets/images/electronics/product/png/13.png")}
                                     className="img-fluid lazyload"
                                     alt=""
                                   />
@@ -3823,7 +3470,7 @@ const Home = () => {
                                   className="text-center"
                                 >
                                   <img
-                                    src="assets/images/electronics/product/png/11.png"
+                                    src={require("../assets/images/electronics/product/png/11.png")}
                                     className="img-fluid lazyload"
                                     alt=""
                                   />
@@ -3874,7 +3521,7 @@ const Home = () => {
                               </div>
                               <a href="javascript:void(0)">
                                 <img
-                                  src="assets/images/electronics/product/png/14.png"
+                                  src={require("../assets/images/electronics/product/png/14.png")}
                                   className="img-fluid lazyload"
                                   alt=""
                                 />
@@ -3927,7 +3574,7 @@ const Home = () => {
                                   className="text-center"
                                 >
                                   <img
-                                    src="assets/images/electronics/product/png/10.png"
+                                    src={require("../assets/images/electronics/product/png/10.png")}
                                     className="img-fluid lazyload"
                                     alt=""
                                   />
@@ -3974,7 +3621,7 @@ const Home = () => {
                                   className="text-center"
                                 >
                                   <img
-                                    src="assets/images/electronics/product/png/9.png"
+                                    src={require("../assets/images/electronics/product/png/9.png")}
                                     className="img-fluid lazyload"
                                     alt=""
                                   />
@@ -4019,7 +3666,7 @@ const Home = () => {
                                   className="text-center"
                                 >
                                   <img
-                                    src="assets/images/electronics/product/png/8.png"
+                                    src={require("../assets/images/electronics/product/png/8.png")}
                                     className="img-fluid lazyload"
                                     alt=""
                                   />
@@ -4078,7 +3725,7 @@ const Home = () => {
                                   className="text-center"
                                 >
                                   <img
-                                    src="assets/images/electronics/product/png/8.png"
+                                    src={require("../assets/images/electronics/product/png/8.png")}
                                     className="img-fluid lazyload"
                                     alt=""
                                   />
@@ -4123,7 +3770,7 @@ const Home = () => {
                                   className="text-center"
                                 >
                                   <img
-                                    src="assets/images/electronics/product/png/9.png"
+                                    src={require("../assets/images/electronics/product/png/9.png")}
                                     className="img-fluid lazyload"
                                     alt=""
                                   />
@@ -4168,7 +3815,7 @@ const Home = () => {
                                   className="text-center"
                                 >
                                   <img
-                                    src="assets/images/electronics/product/png/10.png"
+                                    src={require("../assets/images/electronics/product/png/10.png")}
                                     className="img-fluid lazyload"
                                     alt=""
                                   />
@@ -4221,7 +3868,7 @@ const Home = () => {
                               </div>
                               <a href="javascript:void(0)">
                                 <img
-                                  src="assets/images/electronics/product/png/14.png"
+                                  src={require("../assets/images/electronics/product/png/14.png")}
                                   className="img-fluid lazyload"
                                   alt=""
                                 />
@@ -4274,7 +3921,7 @@ const Home = () => {
                                   className="text-center"
                                 >
                                   <img
-                                    src="assets/images/electronics/product/png/11.png"
+                                    src={require("../assets/images/electronics/product/png/11.png")}
                                     className="img-fluid lazyload"
                                     alt=""
                                   />
@@ -4319,7 +3966,7 @@ const Home = () => {
                                   className="text-center"
                                 >
                                   <img
-                                    src="assets/images/electronics/product/png/13.png"
+                                    src={require("../assets/images/electronics/product/png/13.png")}
                                     className="img-fluid lazyload"
                                     alt=""
                                   />
@@ -4364,7 +4011,7 @@ const Home = () => {
                                   className="text-center"
                                 >
                                   <img
-                                    src="assets/images/electronics/product/png/12.png"
+                                    src={require("../assets/images/electronics/product/png/12.png")}
                                     className="img-fluid lazyload"
                                     alt=""
                                   />
@@ -4419,7 +4066,7 @@ const Home = () => {
                                   className="text-center"
                                 >
                                   <img
-                                    src="assets/images/electronics/product/png/12.png"
+                                    src={require("../assets/images/electronics/product/png/12.png")}
                                     className="img-fluid lazyload"
                                     alt=""
                                   />
@@ -4464,7 +4111,7 @@ const Home = () => {
                                   className="text-center"
                                 >
                                   <img
-                                    src="assets/images/electronics/product/png/11.png"
+                                    src={require("../assets/images/electronics/product/png/11.png")}
                                     className="img-fluid lazyload"
                                     alt=""
                                   />
@@ -4509,7 +4156,7 @@ const Home = () => {
                                   className="text-center"
                                 >
                                   <img
-                                    src="assets/images/electronics/product/png/8.png"
+                                    src={require("../assets/images/electronics/product/png/8.png")}
                                     className="img-fluid lazyload"
                                     alt=""
                                   />
@@ -4560,7 +4207,7 @@ const Home = () => {
                               </div>
                               <a href="javascript:void(0)">
                                 <img
-                                  src="assets/images/electronics/product/png/14.png"
+                                  src={require("../assets/images/electronics/product/png/14.png")}
                                   className="img-fluid lazyload"
                                   alt=""
                                 />
@@ -4613,7 +4260,7 @@ const Home = () => {
                                   className="text-center"
                                 >
                                   <img
-                                    src="assets/images/electronics/product/png/9.png"
+                                    src={require("../assets/images/electronics/product/png/9.png")}
                                     className="img-fluid lazyload"
                                     alt=""
                                   />
@@ -4658,7 +4305,7 @@ const Home = () => {
                                   className="text-center"
                                 >
                                   <img
-                                    src="assets/images/electronics/product/png/13.png"
+                                    src={require("../assets/images/electronics/product/png/13.png")}
                                     className="img-fluid lazyload"
                                     alt=""
                                   />
@@ -4703,7 +4350,7 @@ const Home = () => {
                                   className="text-center"
                                 >
                                   <img
-                                    src="assets/images/electronics/product/png/10.png"
+                                    src={require("../assets/images/electronics/product/png/10.png")}
                                     className="img-fluid lazyload"
                                     alt=""
                                   />
@@ -4760,7 +4407,7 @@ const Home = () => {
                                   className="text-center"
                                 >
                                   <img
-                                    src="assets/images/electronics/product/png/12.png"
+                                    src={require("../assets/images/electronics/product/png/12.png")}
                                     className="img-fluid lazyload"
                                     alt=""
                                   />
@@ -4805,7 +4452,7 @@ const Home = () => {
                                   className="text-center"
                                 >
                                   <img
-                                    src="assets/images/electronics/product/png/13.png"
+                                    src={require("../assets/images/electronics/product/png/13.png")}
                                     className="img-fluid lazyload"
                                     alt=""
                                   />
@@ -4850,7 +4497,7 @@ const Home = () => {
                                   className="text-center"
                                 >
                                   <img
-                                    src="assets/images/electronics/product/png/11.png"
+                                    src={require("../assets/images/electronics/product/png/11.png")}
                                     className="img-fluid lazyload"
                                     alt=""
                                   />
@@ -4901,7 +4548,7 @@ const Home = () => {
                               </div>
                               <a href="javascript:void(0)">
                                 <img
-                                  src="assets/images/electronics/product/png/14.png"
+                                  src={require("../assets/images/electronics/product/png/14.png")}
                                   className="img-fluid lazyload"
                                   alt=""
                                 />
@@ -4954,7 +4601,7 @@ const Home = () => {
                                   className="text-center"
                                 >
                                   <img
-                                    src="assets/images/electronics/product/png/10.png"
+                                    src={require("../assets/images/electronics/product/png/10.png")}
                                     className="img-fluid lazyload"
                                     alt=""
                                   />
@@ -5001,7 +4648,7 @@ const Home = () => {
                                   className="text-center"
                                 >
                                   <img
-                                    src="assets/images/electronics/product/png/9.png"
+                                    src={require("../assets/images/electronics/product/png/9.png")}
                                     className="img-fluid lazyload"
                                     alt=""
                                   />
@@ -5046,7 +4693,7 @@ const Home = () => {
                                   className="text-center"
                                 >
                                   <img
-                                    src="assets/images/electronics/product/png/8.png"
+                                    src={require("../assets/images/electronics/product/png/8.png")}
                                     className="img-fluid lazyload"
                                     alt=""
                                   />
@@ -5105,7 +4752,7 @@ const Home = () => {
                                   className="text-center"
                                 >
                                   <img
-                                    src="assets/images/electronics/product/png/10.png"
+                                    src={require("../assets/images/electronics/product/png/10.png")}
                                     className="img-fluid lazyload"
                                     alt=""
                                   />
@@ -5152,7 +4799,7 @@ const Home = () => {
                                   className="text-center"
                                 >
                                   <img
-                                    src="assets/images/electronics/product/png/9.png"
+                                    src={require("../assets/images/electronics/product/png/9.png")}
                                     className="img-fluid lazyload"
                                     alt=""
                                   />
@@ -5197,7 +4844,7 @@ const Home = () => {
                                   className="text-center"
                                 >
                                   <img
-                                    src="assets/images/electronics/product/png/8.png"
+                                    src={require("../assets/images/electronics/product/png/8.png")}
                                     className="img-fluid lazyload"
                                     alt=""
                                   />
@@ -5248,7 +4895,7 @@ const Home = () => {
                               </div>
                               <a href="javascript:void(0)">
                                 <img
-                                  src="assets/images/electronics/product/png/14.png"
+                                  src={require("../assets/images/electronics/product/png/14.png")}
                                   className="img-fluid lazyload"
                                   alt=""
                                 />
@@ -5301,7 +4948,7 @@ const Home = () => {
                                   className="text-center"
                                 >
                                   <img
-                                    src="assets/images/electronics/product/png/12.png"
+                                    src={require("../assets/images/electronics/product/png/12.png")}
                                     className="img-fluid lazyload"
                                     alt=""
                                   />
@@ -5346,7 +4993,7 @@ const Home = () => {
                                   className="text-center"
                                 >
                                   <img
-                                    src="assets/images/electronics/product/png/13.png"
+                                    src={require("../assets/images/electronics/product/png/13.png")}
                                     className="img-fluid lazyload"
                                     alt=""
                                   />
@@ -5391,7 +5038,7 @@ const Home = () => {
                                   className="text-center"
                                 >
                                   <img
-                                    src="assets/images/electronics/product/png/11.png"
+                                    src={require("../assets/images/electronics/product/png/11.png")}
                                     className="img-fluid lazyload"
                                     alt=""
                                   />
@@ -5448,340 +5095,245 @@ const Home = () => {
                 <h2>Instagram Shop</h2>
                 <h5>New Collection</h5>
               </div>
-              <div className="product-style-1 instagram-2">
-                <div className="insta-slider product-wrapper instagram-wrap">
-                  <div>
-                    <div className="product-box">
-                      <div className="img-wrapper">
-                        <div className="top-wishlist product-color">
-                          <a
-                            href="wishlist.html"
-                            className="heart-wishlist heart-color"
-                          >
-                            <i className="far fa-heart"></i>
-                          </a>
-                        </div>
-                        <div className="share share-box share-opacity">
-                          <span className="share-plus share-plus-color">+</span>
-                          <span>Share</span>
-                        </div>
-                        <a
-                          href="shop-left-sidebar.html"
-                          className="text-center"
-                        >
-                          <img
-                            src="assets/images/electronics/instagram/1.jpg"
-                            className="bg-img lazyload"
-                            alt=""
-                          />
-                        </a>
-                      </div>
-                      <div className="insta-hover text-center">
-                        <div>
-                          <h5>New Offer -56% Discount</h5>
-                          <h3 className="text-hide">Women T-shirt From $35</h3>
-                          <button
-                            onclick="location.href = 'shop-left-sidebar.html';"
-                            type="button"
-                            className="btn btn-light-white"
-                          >
-                            Shop now{" "}
-                            <i className="fas fa-chevron-right ms-2"></i>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
 
-                  <div>
-                    <div className="product-box">
-                      <div className="img-wrapper">
-                        <div className="top-wishlist product-color">
-                          <a
-                            href="wishlist.html"
-                            className="heart-wishlist heart-color"
-                          >
-                            <i className="far fa-heart"></i>
-                          </a>
-                        </div>
-                        <div className="share share-box share-opacity">
-                          <span className="share-plus share-plus-color">+</span>
-                          <span>Share</span>
-                        </div>
+              <Carousel
+                className="insta-slider product-wrapper instagram-wrap"
+                showDots={true}
+                arrows={false}
+                responsive={responsive}
+              >
+                <div>
+                  <div className="product-box">
+                    <div className="img-wrapper">
+                      <div className="top-wishlist product-color">
                         <a
-                          href="shop-left-sidebar.html"
-                          className="text-center"
+                          href="wishlist.html"
+                          className="heart-wishlist heart-color"
                         >
-                          <img
-                            src="assets/images/electronics/instagram/2.jpg"
-                            className="bg-img lazyload"
-                            alt=""
-                          />
+                          <i className="far fa-heart"></i>
                         </a>
                       </div>
-                      <div className="insta-hover text-center">
-                        <div>
-                          <h5>New Offer -40% Discount</h5>
-                          <h3 className="text-hide">Men jacket From $80</h3>
-                          <button
-                            onclick="location.href = 'shop-left-sidebar.html';"
-                            type="button"
-                            className="btn btn-light-white"
-                          >
-                            Shop now{" "}
-                            <i className="fas fa-chevron-right ms-2"></i>
-                          </button>
-                        </div>
+                      <div className="share share-box share-opacity">
+                        <span className="share-plus share-plus-color">+</span>
+                        <span>Share</span>
+                      </div>
+                      <a href="shop-left-sidebar.html" className="text-center">
+                        <img
+                          src={require("../assets/images/electronics/instagram/3.jpg")}
+                          className="bg-img lazyload"
+                          alt=""
+                        />
+                      </a>
+                    </div>
+                    <div className="insta-hover text-center">
+                      <div>
+                        <h5>New Offer -25% Discount</h5>
+                        <h3 className="text-hide">Women jacket From $74</h3>
+                        <button
+                          onclick="location.href = 'shop-left-sidebar.html';"
+                          type="button"
+                          className="btn btn-light-white"
+                        >
+                          Shop now <i className="fas fa-chevron-right ms-2"></i>
+                        </button>
                       </div>
                     </div>
                   </div>
+                </div>
 
-                  <div>
-                    <div className="product-box">
-                      <div className="img-wrapper">
-                        <div className="top-wishlist product-color">
-                          <a
-                            href="wishlist.html"
-                            className="heart-wishlist heart-color"
-                          >
-                            <i className="far fa-heart"></i>
-                          </a>
-                        </div>
-                        <div className="share share-box share-opacity">
-                          <span className="share-plus share-plus-color">+</span>
-                          <span>Share</span>
-                        </div>
+                <div>
+                  <div className="product-box">
+                    <div className="img-wrapper">
+                      <div className="top-wishlist product-color">
                         <a
-                          href="shop-left-sidebar.html"
-                          className="text-center"
+                          href="wishlist.html"
+                          className="heart-wishlist heart-color"
                         >
-                          <img
-                            src="assets/images/electronics/instagram/3.jpg"
-                            className="bg-img lazyload"
-                            alt=""
-                          />
+                          <i className="far fa-heart"></i>
                         </a>
                       </div>
-                      <div className="insta-hover text-center">
-                        <div>
-                          <h5>New Offer -25% Discount</h5>
-                          <h3 className="text-hide">Women jacket From $74</h3>
-                          <button
-                            onclick="location.href = 'shop-left-sidebar.html';"
-                            type="button"
-                            className="btn btn-light-white"
-                          >
-                            Shop now{" "}
-                            <i className="fas fa-chevron-right ms-2"></i>
-                          </button>
-                        </div>
+                      <div className="share share-box share-opacity">
+                        <span className="share-plus share-plus-color">+</span>
+                        <span>Share</span>
+                      </div>
+                      <a href="shop-left-sidebar.html" className="text-center">
+                        <img
+                          src={require("../assets/images/electronics/instagram/3.jpg")}
+                          className="bg-img lazyload"
+                          alt=""
+                        />
+                      </a>
+                    </div>
+                    <div className="insta-hover text-center">
+                      <div>
+                        <h5>New Offer -25% Discount</h5>
+                        <h3 className="text-hide">Women jacket From $74</h3>
+                        <button
+                          onclick="location.href = 'shop-left-sidebar.html';"
+                          type="button"
+                          className="btn btn-light-white"
+                        >
+                          Shop now <i className="fas fa-chevron-right ms-2"></i>
+                        </button>
                       </div>
                     </div>
                   </div>
+                </div>
+                <div>
+                  <div className="product-box">
+                    <div className="img-wrapper">
+                      <div className="top-wishlist product-color">
+                        <a
+                          href="wishlist.html"
+                          className="heart-wishlist heart-color"
+                        >
+                          <i className="far fa-heart"></i>
+                        </a>
+                      </div>
+                      <div className="share share-box share-opacity">
+                        <span className="share-plus share-plus-color">+</span>
+                        <span>Share</span>
+                      </div>
+                      <a href="shop-left-sidebar.html" className="text-center">
+                        <img
+                          src={require("../assets/images/electronics/instagram/3.jpg")}
+                          className="bg-img lazyload"
+                          alt=""
+                        />
+                      </a>
+                    </div>
+                    <div className="insta-hover text-center">
+                      <div>
+                        <h5>New Offer -25% Discount</h5>
+                        <h3 className="text-hide">Women jacket From $74</h3>
+                        <button
+                          onclick="location.href = 'shop-left-sidebar.html';"
+                          type="button"
+                          className="btn btn-light-white"
+                        >
+                          Shop now <i className="fas fa-chevron-right ms-2"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div className="product-box">
+                    <div className="img-wrapper">
+                      <div className="top-wishlist product-color">
+                        <a
+                          href="wishlist.html"
+                          className="heart-wishlist heart-color"
+                        >
+                          <i className="far fa-heart"></i>
+                        </a>
+                      </div>
+                      <div className="share share-box share-opacity">
+                        <span className="share-plus share-plus-color">+</span>
+                        <span>Share</span>
+                      </div>
+                      <a href="shop-left-sidebar.html" className="text-center">
+                        <img
+                          src={require("../assets/images/electronics/instagram/3.jpg")}
+                          className="bg-img lazyload"
+                          alt=""
+                        />
+                      </a>
+                    </div>
+                    <div className="insta-hover text-center">
+                      <div>
+                        <h5>New Offer -25% Discount</h5>
+                        <h3 className="text-hide">Women jacket From $74</h3>
+                        <button
+                          onclick="location.href = 'shop-left-sidebar.html';"
+                          type="button"
+                          className="btn btn-light-white"
+                        >
+                          Shop now <i className="fas fa-chevron-right ms-2"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
-                  <div>
-                    <div className="product-box">
-                      <div className="img-wrapper">
-                        <div className="top-wishlist product-color">
-                          <a
-                            href="wishlist.html"
-                            className="heart-wishlist heart-color"
-                          >
-                            <i className="far fa-heart"></i>
-                          </a>
-                        </div>
-                        <div className="share share-box share-opacity">
-                          <span className="share-plus share-plus-color">+</span>
-                          <span>Share</span>
-                        </div>
+                <div>
+                  <div className="product-box">
+                    <div className="img-wrapper">
+                      <div className="top-wishlist product-color">
                         <a
-                          href="shop-left-sidebar.html"
-                          className="text-center"
+                          href="wishlist.html"
+                          className="heart-wishlist heart-color"
                         >
-                          <img
-                            src="assets/images/electronics/instagram/4.jpg"
-                            className="bg-img lazyload"
-                            alt=""
-                          />
+                          <i className="far fa-heart"></i>
                         </a>
                       </div>
-                      <div className="insta-hover text-center">
-                        <div>
-                          <h5>New Offer -30% Discount</h5>
-                          <h3 className="text-hide">Men Jacket From $30</h3>
-                          <button
-                            onclick="location.href = 'shop-left-sidebar.html';"
-                            type="button"
-                            className="btn btn-light-white"
-                          >
-                            Shop now{" "}
-                            <i className="fas fa-chevron-right ms-2"></i>
-                          </button>
-                        </div>
+                      <div className="share share-box share-opacity">
+                        <span className="share-plus share-plus-color">+</span>
+                        <span>Share</span>
+                      </div>
+                      <a href="shop-left-sidebar.html" className="text-center">
+                        <img
+                          src={require("../assets/images/electronics/instagram/3.jpg")}
+                          className="bg-img lazyload"
+                          alt=""
+                        />
+                      </a>
+                    </div>
+                    <div className="insta-hover text-center">
+                      <div>
+                        <h5>New Offer -25% Discount</h5>
+                        <h3 className="text-hide">Women jacket From $74</h3>
+                        <button
+                          onclick="location.href = 'shop-left-sidebar.html';"
+                          type="button"
+                          className="btn btn-light-white"
+                        >
+                          Shop now <i className="fas fa-chevron-right ms-2"></i>
+                        </button>
                       </div>
                     </div>
                   </div>
+                </div>
 
-                  <div>
-                    <div className="product-box">
-                      <div className="img-wrapper">
-                        <div className="top-wishlist product-color">
-                          <a
-                            href="wishlist.html"
-                            className="heart-wishlist heart-color"
-                          >
-                            <i className="far fa-heart"></i>
-                          </a>
-                        </div>
-                        <div className="share share-box share-opacity">
-                          <span className="share-plus share-plus-color">+</span>
-                          <span>Share</span>
-                        </div>
+                <div>
+                  <div className="product-box">
+                    <div className="img-wrapper">
+                      <div className="top-wishlist product-color">
                         <a
-                          href="shop-left-sidebar.html"
-                          className="text-center"
+                          href="wishlist.html"
+                          className="heart-wishlist heart-color"
                         >
-                          <img
-                            src="assets/images/electronics/instagram/5.jpg"
-                            className="bg-img lazyload"
-                            alt=""
-                          />
+                          <i className="far fa-heart"></i>
                         </a>
                       </div>
-                      <div className="insta-hover text-center">
-                        <div>
-                          <h5>New Offer -40% Discount</h5>
-                          <h3 className="text-hide">Women T-shirt From $20</h3>
-                          <button
-                            onclick="location.href = 'shop-left-sidebar.html';"
-                            type="button"
-                            className="btn btn-light-white"
-                          >
-                            Shop now{" "}
-                            <i className="fas fa-chevron-right ms-2"></i>
-                          </button>
-                        </div>
+                      <div className="share share-box share-opacity">
+                        <span className="share-plus share-plus-color">+</span>
+                        <span>Share</span>
                       </div>
+                      <a href="shop-left-sidebar.html" className="text-center">
+                        <img
+                          src={require("../assets/images/electronics/instagram/3.jpg")}
+                          className="bg-img lazyload"
+                          alt=""
+                        />
+                      </a>
                     </div>
-                  </div>
-
-                  <div>
-                    <div className="product-box">
-                      <div className="img-wrapper">
-                        <div className="top-wishlist product-color">
-                          <a
-                            href="wishlist.html"
-                            className="heart-wishlist heart-color"
-                          >
-                            <i className="far fa-heart"></i>
-                          </a>
-                        </div>
-                        <div className="share share-box share-opacity">
-                          <span className="share-plus share-plus-color">+</span>
-                          <span>Share</span>
-                        </div>
-                        <a
-                          href="shop-left-sidebar.html"
-                          className="text-center"
+                    <div className="insta-hover text-center">
+                      <div>
+                        <h5>New Offer -25% Discount</h5>
+                        <h3 className="text-hide">Women jacket From $74</h3>
+                        <button
+                          onclick="location.href = 'shop-left-sidebar.html';"
+                          type="button"
+                          className="btn btn-light-white"
                         >
-                          <img
-                            src="assets/images/electronics/instagram/2.jpg"
-                            className="bg-img lazyload"
-                            alt=""
-                          />
-                        </a>
-                      </div>
-                      <div className="insta-hover text-center">
-                        <div>
-                          <h5>New Offer -25% Discount</h5>
-                          <h3 className="text-hide">Women jacket From $74</h3>
-                          <button
-                            onclick="location.href = 'shop-left-sidebar.html';"
-                            type="button"
-                            className="btn btn-light-white"
-                          >
-                            Shop now{" "}
-                            <i className="fas fa-chevron-right ms-2"></i>
-                          </button>
-                        </div>
+                          Shop now <i className="fas fa-chevron-right ms-2"></i>
+                        </button>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="section-b-space">
-        <div className="container">
-          <div className="row">
-            <div className="col">
-              <div className="brand-slider">
-                <div>
-                  <div className="brand-image">
-                    <img
-                      src="assets/images/brand/1.png"
-                      className="img-fluid lazyload"
-                      alt="brand logo"
-                    />
-                  </div>
-                </div>
-                <div>
-                  <div className="brand-image">
-                    <img
-                      src="assets/images/brand/2.png"
-                      className="img-fluid lazyload"
-                      alt="brand logo"
-                    />
-                  </div>
-                </div>
-                <div>
-                  <div className="brand-image">
-                    <img
-                      src="assets/images/brand/3.png"
-                      className="img-fluid lazyload"
-                      alt="brand logo"
-                    />
-                  </div>
-                </div>
-                <div>
-                  <div className="brand-image">
-                    <img
-                      src="assets/images/brand/4.png"
-                      className="img-fluid lazyload"
-                      alt="brand logo"
-                    />
-                  </div>
-                </div>
-                <div>
-                  <div className="brand-image">
-                    <img
-                      src="assets/images/brand/5.png"
-                      className="img-fluid lazyload"
-                      alt="brand logo"
-                    />
-                  </div>
-                </div>
-                <div>
-                  <div className="brand-image">
-                    <img
-                      src="assets/images/brand/6.png"
-                      className="img-fluid lazyload"
-                      alt="brand logo"
-                    />
-                  </div>
-                </div>
-                <div>
-                  <div className="brand-image">
-                    <img
-                      src="assets/images/brand/4.png"
-                      className="img-fluid lazyload"
-                      alt="brand logo"
-                    />
-                  </div>
-                </div>
-              </div>
+              </Carousel>
             </div>
           </div>
         </div>
@@ -5795,7 +5347,7 @@ const Home = () => {
                   <div className="brand-logo">
                     <a href="index-2.html" className="footer-logo">
                       <img
-                        src="assets/images/logo.png"
+                        src={require("../assets/images/logo.png")}
                         className="img-fluid lazyload"
                         alt="logo"
                       />
@@ -6004,7 +5556,7 @@ const Home = () => {
               </div>
               <div className="col-md-6">
                 <p className="mb-0 font-dark">
-                  © 2022, Voxo Theme. Made with heart by Pixelstrap
+                  © 2022, Darwin Theme. Made with heart by Pixelstrap
                 </p>
               </div>
             </div>
@@ -6380,24 +5932,6 @@ const Home = () => {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-      <div className="cookie-bar-section cookiebar-left-section">
-        <img src={require("../assets/images/cookie.png")} alt="" />
-        <div className="content">
-          <h3>Cookies Consent</h3>
-          <p className="font-light">
-            This website use cookies to ensure you get the best experience on
-            our website.
-          </p>
-          <div className="cookie-buttons">
-            <button className="btn btn-solid-default" id="button">
-              I understand
-            </button>
-            <a href="javascript:void(0)" className="btn default-light1">
-              Learn more
-            </a>
           </div>
         </div>
       </div>
